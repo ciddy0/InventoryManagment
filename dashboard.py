@@ -20,6 +20,7 @@ tree_style.configure(
     font=('times new roman', 12)
 )
 tree_style.map("Treeview", background=[("selected", "#0074B7")])  # Highlight color for selection
+
 button_style = ttk.Style()
 button_style.configure(
     "TButton",
@@ -30,14 +31,8 @@ button_style.configure(
     borderwidth=5,  # Border width
     relief=GROOVE,
 )
-
 # Add hover effect for TButton
-button_style.map(
-    "TButton",
-    background=[("active", "#005A91")],  # Change background on hover
-    foreground=[("disabled", "gray")],  # Text color when disabled
-    relief=[("pressed", "sunken")],
-)
+button_style.map("TButton", background=[("active", "#005A91")],  foreground=[("disabled", "gray")], relief=[("pressed", "sunken")],)
 
 # inventory image and resizing
 bg_image = PhotoImage(file='icons/inventory.png')
@@ -70,7 +65,8 @@ menu_label.pack(fill=X)
 # employee button
 employee_icon = PhotoImage(file='icons/employee.png')
 employee_icon = employee_icon.zoom(5).subsample(32)
-employee_button = Button(left_frame, image=employee_icon, compound=LEFT, text="Employee", font=('times new roman', 20, 'bold'), padx=20, command=lambda: employee_form(window))
+employee_button = Button(left_frame, image=employee_icon, compound=LEFT, text="Employee", font=('times new roman', 20, 'bold'), padx=20,
+                         command=lambda: employee_form(window))
 employee_button.pack(fill=X)
 
 # supplier button
