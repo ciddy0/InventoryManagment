@@ -28,12 +28,12 @@ subtitleLabel.place(x=0, y=70, relwidth=1)
 # left menu
 leftFrame = Frame(window, bg='#D3D3D3')
 leftFrame.place(x=0, y=102, width=200, height=555)
-logoImage = PhotoImage(file='icons/checklist.png')
-logoImage = logoImage.zoom(19).subsample(32)
-imageLabel = Label(leftFrame, image=logoImage, bg= '#D3D3D3')
+logoImage = PhotoImage(file='icons/menu_icon.png')
+logoImage = logoImage.zoom(9).subsample(32)
+imageLabel = Label(leftFrame, image=logoImage, bg= '#0074B7')
 imageLabel.pack(fill=X)
 
-menuLabel = Label(leftFrame, text='Menu', font=('times new roman', 20), bg='#0074B7')
+menuLabel = Label(leftFrame, text='Menu', font=('times new roman', 20), bg='#60A3D9')
 menuLabel.pack(fill=X)
 
 # employee button
@@ -44,13 +44,13 @@ employee_button.pack(fill=X)
 
 # supplier button
 supplier_icon = PhotoImage(file='icons/supplier.png')
-supplier_icon = supplier_icon.zoom(6).subsample(32)
+supplier_icon = supplier_icon.zoom(7).subsample(32)
 supplier_button = Button(leftFrame, image=supplier_icon, compound=LEFT, text="Supplier", font=('times new roman', 20, 'bold'), padx=20)
 supplier_button.pack(fill=X)
 
 # category button
 category_icon = PhotoImage(file='icons/category.png')
-category_icon = category_icon.zoom(6).subsample(32)
+category_icon = category_icon.zoom(7).subsample(32)
 category_button = Button(leftFrame, image=category_icon, compound=LEFT, text="Category", font=('times new roman', 20, 'bold'), padx=20)
 category_button.pack(fill=X)
 
@@ -62,13 +62,13 @@ product_button.pack(fill=X)
 
 # sales button
 sales_icon = PhotoImage(file='icons/sales.png')
-sales_icon = sales_icon.zoom(4).subsample(32)
+sales_icon = sales_icon.zoom(3).subsample(32)
 sales_button = Button(leftFrame, image=sales_icon, compound=LEFT, text="Sales", font=('times new roman', 20, 'bold'), padx=20)
 sales_button.pack(fill=X)
 
 # exit button
 exit_icon = PhotoImage(file='icons/exit.png')
-exit_icon = exit_icon.zoom(2).subsample(25)
+exit_icon = exit_icon.zoom(2).subsample(52)
 exit_button = Button(leftFrame, image=exit_icon, compound=LEFT, text="Exit", font=('times new roman', 20, 'bold'), padx=20)
 exit_button.pack(fill=X)
 
