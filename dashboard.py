@@ -14,62 +14,62 @@ bg_image = bg_image.zoom(5)
 bg_image = bg_image.subsample(32)
 
 # Inventory Title
-titleLabel = Label(window,image=bg_image,compound=LEFT, text='  Inventory Management System', font=('times new roman', 40, 'bold'), bg='#003B73', fg='white', anchor='w', padx=20)
-titleLabel.place(x=0,y=0, relwidth=1)
+title_label = Label(window,image=bg_image,compound=LEFT, text='  Inventory Management System', font=('times new roman', 40, 'bold'), bg='#003B73', fg='white', anchor='w', padx=20)
+title_label.place(x=0,y=0, relwidth=1)
 
 # Logout button
-logoutButton = Button(window, text="Logout", font=('times new roman', 20, 'bold'), fg='#003B73')
-logoutButton.place(x=1110, y=10)
+logout_button = Button(window, text="Logout", font=('times new roman', 20, 'bold'), fg='#003B73')
+logout_button.place(x=1110, y=10)
 
 # system details
-subtitleLabel = Label(window, text='Welcome Admin\t\t Date: 01-02-2025\t\t Time: 12:21:00 am', font=('times new roman', 15), bg='#60A3D9', fg='white')
-subtitleLabel.place(x=0, y=70, relwidth=1)
+subtitle_label = Label(window, text='Welcome Admin\t\t Date: 01-02-2025\t\t Time: 12:21:00 am', font=('times new roman', 15), bg='#60A3D9', fg='white')
+subtitle_label.place(x=0, y=70, relwidth=1)
 
 # left menu
-leftFrame = Frame(window, bg='#D3D3D3')
-leftFrame.place(x=0, y=102, width=200, height=555)
-logoImage = PhotoImage(file='icons/menu_icon.png')
-logoImage = logoImage.zoom(9).subsample(32)
-imageLabel = Label(leftFrame, image=logoImage, bg= '#0074B7')
-imageLabel.pack(fill=X)
+left_frame = Frame(window, bg='#D3D3D3')
+left_frame.place(x=0, y=102, width=200, height=555)
+menu_image = PhotoImage(file='icons/menu_icon.png')
+menu_image = menu_image.zoom(9).subsample(32)
+menu_image_label = Label(left_frame, image=menu_image, bg= '#0074B7')
+menu_image_label.pack(fill=X)
 
-menuLabel = Label(leftFrame, text='Menu', font=('times new roman', 20), bg='#60A3D9')
-menuLabel.pack(fill=X)
+menu_label = Label(left_frame, text='Menu', font=('times new roman', 20), bg='#60A3D9')
+menu_label.pack(fill=X)
 
 # employee button
 employee_icon = PhotoImage(file='icons/employee.png')
 employee_icon = employee_icon.zoom(5).subsample(32)
-employee_button = Button(leftFrame, image=employee_icon, compound=LEFT, text="Employee", font=('times new roman', 20, 'bold'), padx=20)
+employee_button = Button(left_frame, image=employee_icon, compound=LEFT, text="Employee", font=('times new roman', 20, 'bold'), padx=20)
 employee_button.pack(fill=X)
 
 # supplier button
 supplier_icon = PhotoImage(file='icons/supplier.png')
 supplier_icon = supplier_icon.zoom(7).subsample(32)
-supplier_button = Button(leftFrame, image=supplier_icon, compound=LEFT, text="Supplier", font=('times new roman', 20, 'bold'), padx=20)
+supplier_button = Button(left_frame, image=supplier_icon, compound=LEFT, text="Supplier", font=('times new roman', 20, 'bold'), padx=20)
 supplier_button.pack(fill=X)
 
 # category button
 category_icon = PhotoImage(file='icons/category.png')
 category_icon = category_icon.zoom(7).subsample(32)
-category_button = Button(leftFrame, image=category_icon, compound=LEFT, text="Category", font=('times new roman', 20, 'bold'), padx=20)
+category_button = Button(left_frame, image=category_icon, compound=LEFT, text="Category", font=('times new roman', 20, 'bold'), padx=20)
 category_button.pack(fill=X)
 
 # product button
 product_icon = PhotoImage(file='icons/product.png')
 product_icon = product_icon.zoom(4).subsample(32)
-product_button = Button(leftFrame, image=product_icon, compound=LEFT, text="Product", font=('times new roman', 20, 'bold'), padx=20)
+product_button = Button(left_frame, image=product_icon, compound=LEFT, text="Product", font=('times new roman', 20, 'bold'), padx=20)
 product_button.pack(fill=X)
 
 # sales button
 sales_icon = PhotoImage(file='icons/sales.png')
 sales_icon = sales_icon.zoom(3).subsample(32)
-sales_button = Button(leftFrame, image=sales_icon, compound=LEFT, text="Sales", font=('times new roman', 20, 'bold'), padx=20)
+sales_button = Button(left_frame, image=sales_icon, compound=LEFT, text="Sales", font=('times new roman', 20, 'bold'), padx=20)
 sales_button.pack(fill=X)
 
 # exit button
 exit_icon = PhotoImage(file='icons/exit.png')
 exit_icon = exit_icon.zoom(2).subsample(52)
-exit_button = Button(leftFrame, image=exit_icon, compound=LEFT, text="Exit", font=('times new roman', 20, 'bold'), padx=20)
+exit_button = Button(left_frame, image=exit_icon, compound=LEFT, text="Exit", font=('times new roman', 20, 'bold'), padx=20)
 exit_button.pack(fill=X)
 
 # total employees frame
