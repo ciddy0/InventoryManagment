@@ -33,7 +33,7 @@ logoImage = logoImage.zoom(19).subsample(32)
 imageLabel = Label(leftFrame, image=logoImage, bg= '#D3D3D3')
 imageLabel.pack(fill=X)
 
-menuLabel = Label(leftFrame, text='Menu', font=('times new roman', 20), bg='#009688')
+menuLabel = Label(leftFrame, text='Menu', font=('times new roman', 20), bg='#0074B7')
 menuLabel.pack(fill=X)
 
 # employee button
