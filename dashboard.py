@@ -14,11 +14,11 @@ bg_image = bg_image.zoom(5)
 bg_image = bg_image.subsample(32)
 
 # Inventory Title
-titleLabel = Label(window,image=bg_image,compound=LEFT, text='  Inventory Management System', font=('times new roman', 40, 'bold'), bg='#010c48', fg='white', anchor='w', padx=20)
+titleLabel = Label(window,image=bg_image,compound=LEFT, text='  Inventory Management System', font=('times new roman', 40, 'bold'), bg='#003B73', fg='white', anchor='w', padx=20)
 titleLabel.place(x=0,y=0, relwidth=1)
 
 # Logout button
-logoutButton = Button(window, text="Logout", font=('times new roman', 20, 'bold'), fg='#010c48')
+logoutButton = Button(window, text="Logout", font=('times new roman', 20, 'bold'), fg='#003B73')
 logoutButton.place(x=1110, y=10)
 
 # system details
