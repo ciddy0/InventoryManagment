@@ -1,4 +1,5 @@
 from tkinter import *
+from employeeDashboard import *
 
 window = Tk()
 
@@ -7,6 +8,36 @@ window.title('Dashboard')
 window.geometry('1270x668+0+0')
 window.resizable(0,0)
 window.config(bg='#BFD7ED')
+
+# Configure ttk.Style
+tree_style = ttk.Style()
+tree_style.theme_use("default")  # Ensure a default theme is applied
+tree_style.configure(
+    "Treeview",
+    background="white",
+    foreground="black",
+    fieldbackground="white",
+    font=('times new roman', 12)
+)
+tree_style.map("Treeview", background=[("selected", "#0074B7")])  # Highlight color for selection
+button_style = ttk.Style()
+button_style.configure(
+    "TButton",
+    font=("times new roman", 12),
+    background="#003B73",  # Background color
+    foreground="white",  # Text color
+    padding=5,  # Padding around text
+    borderwidth=5,  # Border width
+    relief=GROOVE,
+)
+
+# Add hover effect for TButton
+button_style.map(
+    "TButton",
+    background=[("active", "#005A91")],  # Change background on hover
+    foreground=[("disabled", "gray")],  # Text color when disabled
+    relief=[("pressed", "sunken")],
+)
 
 # inventory image and resizing
 bg_image = PhotoImage(file='icons/inventory.png')
@@ -27,7 +58,7 @@ subtitle_label.place(x=0, y=70, relwidth=1)
 
 # left menu
 left_frame = Frame(window, bg='#D3D3D3')
-left_frame.place(x=0, y=102, width=200, height=555)
+left_frame.place(x=0, y=93, width=200, height=555)
 menu_image = PhotoImage(file='icons/menu_icon.png')
 menu_image = menu_image.zoom(9).subsample(32)
 menu_image_label = Label(left_frame, image=menu_image, bg= '#0074B7')
@@ -39,7 +70,7 @@ menu_label.pack(fill=X)
 # employee button
 employee_icon = PhotoImage(file='icons/employee.png')
 employee_icon = employee_icon.zoom(5).subsample(32)
-employee_button = Button(left_frame, image=employee_icon, compound=LEFT, text="Employee", font=('times new roman', 20, 'bold'), padx=20)
+employee_button = Button(left_frame, image=employee_icon, compound=LEFT, text="Employee", font=('times new roman', 20, 'bold'), padx=20, command=lambda: employee_form(window))
 employee_button.pack(fill=X)
 
 # supplier button
