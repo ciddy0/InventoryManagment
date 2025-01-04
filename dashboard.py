@@ -22,7 +22,7 @@ logoutButton = Button(window, text="Logout", font=('times new roman', 20, 'bold'
 logoutButton.place(x=1110, y=10)
 
 # system details
-subtitleLabel = Label(window, text='Welcome Admin\t\t Date: 01-02-2025\t\t Time: 12:21:00 am', font=('times new roman', 15), bg='#4d636d', fg='white')
+subtitleLabel = Label(window, text='Welcome Admin\t\t Date: 01-02-2025\t\t Time: 12:21:00 am', font=('times new roman', 15), bg='#60A3D9', fg='white')
 subtitleLabel.place(x=0, y=70, relwidth=1)
 
 # left menu
