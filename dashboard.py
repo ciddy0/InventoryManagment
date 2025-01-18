@@ -11,7 +11,7 @@ window.config(bg='#BFD7ED')
 
 # Configure ttk.Style
 tree_style = ttk.Style()
-tree_style.theme_use("default")  # Ensure a default theme is applied
+tree_style.theme_use("default")
 tree_style.configure(
     "Treeview",
     background="white",
@@ -19,16 +19,16 @@ tree_style.configure(
     fieldbackground="white",
     font=('times new roman', 12)
 )
-tree_style.map("Treeview", background=[("selected", "#0074B7")])  # Highlight color for selection
+tree_style.map("Treeview", background=[("selected", "#0074B7")])
 
 button_style = ttk.Style()
 button_style.configure(
     "TButton",
     font=("times new roman", 12),
-    background="#003B73",  # Background color
-    foreground="white",  # Text color
-    padding=5,  # Padding around text
-    borderwidth=5,  # Border width
+    background="#003B73",
+    foreground="white",
+    padding=5,
+    borderwidth=5,  
     relief=GROOVE,
 )
 # Add hover effect for TButton
